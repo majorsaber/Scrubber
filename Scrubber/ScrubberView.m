@@ -27,6 +27,7 @@
 
 -(void)scrubberValueChanged:(UISlider *)slider;
 -(void)scrubberDidEndScrubbing:(UISlider *)slider;
+-(void)scrubberDidBeginScrubbing:(UISlider *)slider;
 
 @end
 
@@ -39,6 +40,7 @@
 }
 
 @synthesize numberOfAnchorPoints=_numberOfAnchorPoints;
+@synthesize delegate;
 
 -(void)setNumberOfAnchorPoints:(int)numberOfAnchorPoints
 {
@@ -55,8 +57,9 @@
     int anchorDistance = frame.size.width / (_numberOfAnchorPoints - 1);
     for (int i = 0; i < _numberOfAnchorPoints; i++) {
         UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"anchor.png"]];
-        [imgView setFrame:CGRectMake((anchorDistance * i) - (6*i), 0, 24, 24)];
-        //TODO:                                             ^^^^^^ this part needs to be fixed, it's just an arbitrary offset inversely proportional to number of anchor points
+        [imgView setTag:ANCHOR];
+        [imgView setFrame:CGRectMake((anchorDistance * i) - ((kAnchorImageSize/(_numberOfAnchorPoints-1))*i), 0, kAnchorImageSize, kAnchorImageSize)];
+        //TODO:                                             ^^^^^^^^^^^ this part needs to be fixed, it's just an offset inversely proportional to number of anchor points, don't know the exact relation yet but this works alright
         [self addSubview:imgView];
     }
 }
@@ -99,10 +102,14 @@
     [slider addTarget:self action:@selector(scrubberValueChanged:) forControlEvents:UIControlEventValueChanged];
     [slider addTarget:self action:@selector(scrubberDidEndScrubbing:) forControlEvents:UIControlEventTouchUpInside];
     [slider addTarget:self action:@selector(scrubberDidEndScrubbing:) forControlEvents:UIControlEventTouchUpOutside];
+    [slider addTarget:self action:@selector(scrubberDidBeginScrubbing:) forControlEvents:UIControlEventTouchDown];
 }
 
 -(void)scrubberValueChanged:(UISlider *)slider
 {
+    if ([delegate respondsToSelector:@selector(scrubber:didScrubToValue:)]) {
+        [delegate scrubber:self didScrubToValue:slider.value];
+    }
 }
 
 -(void)scrubberDidEndScrubbing:(UISlider *)slider
@@ -121,10 +128,25 @@
         }
     }
     
+    if ([delegate respondsToSelector:@selector(scrubber:willSelectIndex:)]) {
+        [delegate scrubber:self willSelectIndex:minIndex];
+    }
+    
     [UIView animateWithDuration:0.5 animations:^{
         [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
         [slider setValue:(_anchorInterval*minIndex)];
+    } completion:^(BOOL finished) {
+        if ([delegate respondsToSelector:@selector(scrubber:didSelectIndex:)]) {
+            [delegate scrubber:self didSelectIndex:minIndex];
+        }
     }];
+}
+
+-(void)scrubberDidBeginScrubbing:(UISlider *)slider
+{
+    if ([delegate respondsToSelector:@selector(scrubberDidBeginScrubbing:)]) {
+        [delegate scrubberDidBeginScrubbing:self];
+    }
 }
 /*
 // Only override drawRect: if you perform custom drawing.

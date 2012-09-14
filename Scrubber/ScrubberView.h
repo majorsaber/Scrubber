@@ -22,6 +22,7 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 
 #define ANCHOR 4
+#define kAnchorImageSize 24
 
 #import <UIKit/UIKit.h>
 
@@ -30,13 +31,15 @@
 @protocol ScrubberDelegate <NSObject>
 
 -(void)scrubber:(ScrubberView*)scrubber didSelectIndex:(int)index;
--(void)scrubber:(ScrubberView*)scrubber didDeselectIndex:(int)index;
--(void)scrubber:(ScrubberView *)scrubber didScrollToIndex:(float)index;
+-(void)scrubber:(ScrubberView *)scrubber didScrubToValue:(float)value;
+-(void)scrubberDidBeginScrubbing:(ScrubberView*)scrubber;
+-(void)scrubber:(ScrubberView *)scrubber willSelectIndex:(int)index;
 
 @end
 
 @interface ScrubberView : UIView
 
 @property (nonatomic) int numberOfAnchorPoints;
+@property (nonatomic, weak) IBOutlet id<ScrubberDelegate> delegate;
 
 @end

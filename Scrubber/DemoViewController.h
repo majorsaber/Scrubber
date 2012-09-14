@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ScrubberView.h"
 
-@interface DemoViewController : UIViewController
+@interface DemoViewController : UIViewController<ScrubberDelegate>
 
 @property (nonatomic, strong) IBOutlet ScrubberView *scrubber;
 @end

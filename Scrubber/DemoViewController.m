@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     
-    [scrubber setNumberOfAnchorPoints:5];
+    [scrubber setNumberOfAnchorPoints:8];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -45,4 +45,23 @@
 	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
+-(void)scrubber:(ScrubberView *)scrubber didScrubToValue:(float)value
+{
+    NSLog(@"did scrub to value:%f",value);
+}
+
+-(void)scrubber:(ScrubberView *)scrubber didSelectIndex:(int)index
+{
+    NSLog(@"did select index:%d",index);
+}
+
+-(void)scrubberDidBeginScrubbing:(ScrubberView *)scrubber
+{
+    NSLog(@"begin scrubbing");
+}
+
+-(void)scrubber:(ScrubberView *)scrubber willSelectIndex:(int)index
+{
+    NSLog(@"will select index:%d",index);
+}
 @end
