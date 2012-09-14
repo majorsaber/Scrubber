@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		015C5AC91602909A00D7BF4C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015C5AC81602909A00D7BF4C /* UIKit.framework */; };
+		015C5ACB1602909A00D7BF4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015C5ACA1602909A00D7BF4C /* Foundation.framework */; };
+		015C5ACD1602909A00D7BF4C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 015C5ACC1602909A00D7BF4C /* CoreGraphics.framework */; };
+		015C5AD31602909A00D7BF4C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 015C5AD11602909A00D7BF4C /* InfoPlist.strings */; };
+		015C5AD51602909A00D7BF4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5AD41602909A00D7BF4C /* main.m */; };
+		015C5AD91602909A00D7BF4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5AD81602909A00D7BF4C /* AppDelegate.m */; };
+		015C5AE2160290B200D7BF4C /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5AE0160290B200D7BF4C /* DemoViewController.m */; };
+		015C5AE3160290B200D7BF4C /* DemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015C5AE1160290B200D7BF4C /* DemoViewController.xib */; };
+		015C5AEA1602914200D7BF4C /* ScrubberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C5AE91602914200D7BF4C /* ScrubberView.m */; };
+		015C5AEE16029EF100D7BF4C /* anchor.png in Resources */ = {isa = PBXBuildFile; fileRef = 015C5AED16029EF000D7BF4C /* anchor.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		015C5AC41602909A00D7BF4C /* Scrubber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrubber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		015C5AC81602909A00D7BF4C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		015C5ACA1602909A00D7BF4C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		015C5ACC1602909A00D7BF4C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		015C5AD01602909A00D7BF4C /* Scrubber-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Scrubber-Info.plist"; sourceTree = "<group>"; };
+		015C5AD21602909A00D7BF4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		015C5AD41602909A00D7BF4C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		015C5AD61602909A00D7BF4C /* Scrubber-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Scrubber-Prefix.pch"; sourceTree = "<group>"; };
+		015C5AD71602909A00D7BF4C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		015C5AD81602909A00D7BF4C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		015C5ADF160290B200D7BF4C /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		015C5AE0160290B200D7BF4C /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		015C5AE1160290B200D7BF4C /* DemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoViewController.xib; sourceTree = "<group>"; };
+		015C5AE81602914100D7BF4C /* ScrubberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrubberView.h; sourceTree = "<group>"; };
+		015C5AE91602914200D7BF4C /* ScrubberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrubberView.m; sourceTree = "<group>"; };
+		015C5AED16029EF000D7BF4C /* anchor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anchor.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		015C5AC11602909A00D7BF4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				015C5AC91602909A00D7BF4C /* UIKit.framework in Frameworks */,
+				015C5ACB1602909A00D7BF4C /* Foundation.framework in Frameworks */,
+				015C5ACD1602909A00D7BF4C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		015C5AB91602909A00D7BF4C = {
+			isa = PBXGroup;
+			children = (
+				015C5ACE1602909A00D7BF4C /* Scrubber */,
+				015C5AC71602909A00D7BF4C /* Frameworks */,
+				015C5AC51602909A00D7BF4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		015C5AC51602909A00D7BF4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				015C5AC41602909A00D7BF4C /* Scrubber.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		015C5AC71602909A00D7BF4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				015C5AC81602909A00D7BF4C /* UIKit.framework */,
+				015C5ACA1602909A00D7BF4C /* Foundation.framework */,
+				015C5ACC1602909A00D7BF4C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		015C5ACE1602909A00D7BF4C /* Scrubber */ = {
+			isa = PBXGroup;
+			children = (
+				015C5AED16029EF000D7BF4C /* anchor.png */,
+				015C5AD71602909A00D7BF4C /* AppDelegate.h */,
+				015C5AD81602909A00D7BF4C /* AppDelegate.m */,
+				015C5ACF1602909A00D7BF4C /* Supporting Files */,
+				015C5ADF160290B200D7BF4C /* DemoViewController.h */,
+				015C5AE0160290B200D7BF4C /* DemoViewController.m */,
+				015C5AE1160290B200D7BF4C /* DemoViewController.xib */,
+				015C5AE81602914100D7BF4C /* ScrubberView.h */,
+				015C5AE91602914200D7BF4C /* ScrubberView.m */,
+			);
+			path = Scrubber;
+			sourceTree = "<group>";
+		};
+		015C5ACF1602909A00D7BF4C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				015C5AD01602909A00D7BF4C /* Scrubber-Info.plist */,
+				015C5AD11602909A00D7BF4C /* InfoPlist.strings */,
+				015C5AD41602909A00D7BF4C /* main.m */,
+				015C5AD61602909A00D7BF4C /* Scrubber-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		015C5AC31602909A00D7BF4C /* Scrubber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 015C5ADC1602909A00D7BF4C /* Build configuration list for PBXNativeTarget "Scrubber" */;
+			buildPhases = (
+				015C5AC01602909A00D7BF4C /* Sources */,
+				015C5AC11602909A00D7BF4C /* Frameworks */,
+				015C5AC21602909A00D7BF4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Scrubber;
+			productName = Scrubber;
+			productReference = 015C5AC41602909A00D7BF4C /* Scrubber.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		015C5ABB1602909A00D7BF4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Sunny Purewal";
+			};
+			buildConfigurationList = 015C5ABE1602909A00D7BF4C /* Build configuration list for PBXProject "Scrubber" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 015C5AB91602909A00D7BF4C;
+			productRefGroup = 015C5AC51602909A00D7BF4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				015C5AC31602909A00D7BF4C /* Scrubber */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		015C5AC21602909A00D7BF4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				015C5AD31602909A00D7BF4C /* InfoPlist.strings in Resources */,
+				015C5AE3160290B200D7BF4C /* DemoViewController.xib in Resources */,
+				015C5AEE16029EF100D7BF4C /* anchor.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		015C5AC01602909A00D7BF4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				015C5AD51602909A00D7BF4C /* main.m in Sources */,
+				015C5AD91602909A00D7BF4C /* AppDelegate.m in Sources */,
+				015C5AE2160290B200D7BF4C /* DemoViewController.m in Sources */,
+				015C5AEA1602914200D7BF4C /* ScrubberView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		015C5AD11602909A00D7BF4C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				015C5AD21602909A00D7BF4C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		015C5ADA1602909A00D7BF4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		015C5ADB1602909A00D7BF4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		015C5ADD1602909A00D7BF4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Scrubber/Scrubber-Prefix.pch";
+				INFOPLIST_FILE = "Scrubber/Scrubber-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		015C5ADE1602909A00D7BF4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Scrubber/Scrubber-Prefix.pch";
+				INFOPLIST_FILE = "Scrubber/Scrubber-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		015C5ABE1602909A00D7BF4C /* Build configuration list for PBXProject "Scrubber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015C5ADA1602909A00D7BF4C /* Debug */,
+				015C5ADB1602909A00D7BF4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		015C5ADC1602909A00D7BF4C /* Build configuration list for PBXNativeTarget "Scrubber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015C5ADD1602909A00D7BF4C /* Debug */,
+				015C5ADE1602909A00D7BF4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 015C5ABB1602909A00D7BF4C /* Project object */;
+}
